@@ -2,7 +2,7 @@
 import { Text, View, Image, ImageBackground, TouchableOpacity } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { styles } from "@/styles/_mainstyle";
-
+import { BACKGROUNDIMAGE, HEROLOGO } from "@/constants";
 
 
 
@@ -11,13 +11,13 @@ export default function Index() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <ImageBackground
-          source={require("@/assets/images/background-image.png")}
+          source={BACKGROUNDIMAGE}
           style={styles.backgroundImageContainer}
           resizeMode="cover"
         >
           <View style={styles.container}>
             <View style={styles.logoContainer}>
-              <Image source={require("@/assets/images/Logo.png")} />
+              <Image source={HEROLOGO} />
             </View>
             <View style={styles.titleContainer}>
               <Text style={styles.titleText}>Find your favorite place here</Text>
