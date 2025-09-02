@@ -58,14 +58,16 @@ const Home = () => {
         </ScrollView>
       </View>
 
-      <ScrollView style={styles.listingContainer}>
-        <PropertyListing listings={SAMPLE_DATA} />
-        <View style={styles.paginationContainer}>
-          <TouchableHighlight style={styles.showMoreButton}>
-            <Text style={styles.showMoreButtonText}>Show more</Text>
-          </TouchableHighlight>
-        </View>
-      </ScrollView>
+    <ScrollView style={styles.listingContainer}>
+      {SAMPLE_DATA.map((property, idx) => (
+        <PropertyListing key={idx} listings={[property]} />
+      ))}
+      <View style={styles.paginationContainer}>
+        <TouchableHighlight style={styles.showMoreButton}>
+        <Text style={styles.showMoreButtonText}>Show more</Text>
+        </TouchableHighlight>
+      </View>
+    </ScrollView>
     </View>
   );
 };
